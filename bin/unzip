@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ $1 == *.zip ]]
+then
+	docker run -it --rm -v $(pwd):/home/josh --name zip --user $(id -u):$(id -g) zip unzip $1
+else
+	echo "Error: The file extension was not '.zip'."
+fi

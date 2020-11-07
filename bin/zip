@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run -it --rm --name zip -v $(pwd):/home/josh --user $(id -u):$(id -g) zip zip -r $1.zip $1
